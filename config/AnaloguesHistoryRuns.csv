@@ -1,0 +1,8 @@
+SITENAME|LNG|LAT|METHOD|MODEL|VARS|WEIGHTS|NDIVISIONS|DIRECTION|GROWINGSEASON|ROTATION|PERIOD|ZONES|RESOLUTION|SCENARIO|OUTFILE|THRESHOLD
+
+ARG_1393272890635|-62.312|-37.775|ccafs|[current,ensemble]|[tmean,prec]|[0.5,0.5]|[12,12]|forward|1:12|prec|[1960_1990,2020_2049]|[arg,arg]|[30s,30s]|[baseline,a1b]|/var/www/analogues/outputs/ARG_1393272890635/|0.0
+BTN_1394687696178|89.87|27.518|ccafs|[current,current]|[tmean,prec]|[.7,.3]|[12,12]|none|3:11|none|[1960_1990,1960_1990]|[btn,btn]|[30s,30s]|[baseline,baseline]|/var/www/analogues/outputs/BTN_1394687696178/|0.0
+CHN_1394594146879|91.27166667|27.27388889|ccafs|[current,current]|[tmean,prec]|[0.5,0.5]|[12,12]|none|1:12|none|[1960_1990,1960_1990]|[btn,chn]|[30s,30s]|[baseline,baseline]|/var/www/analogues/outputs/CHN_1394594146879/|0.0
+COL_1393509766157|-76.518|3.405|ccafs|[ensemble,current]|[tmean,prec]|[0.5,0.5]|[12,12]|backward|1:3|both|[2020_2049,1960_1990]|[col,col]|[30s,30s]|[a1b,baseline]|/var/www/analogues/outputs/COL_1393509766157/|0.0
+GLOBAL_1392876350711|-122.674|48.874|ccafs|[current,current]|[tmean,prec]|[0.5,0.5]|[12,12]|none|1:12|none|[1960_1990,1960_1990]|[global,global]|[10min,10min]|[baseline,baseline]|/var/www/analogues/outputs/GLOBAL_1392876350711/|0.0
+GLOBAL_1393504908447|-62.74|-34.611|ccafs|[ensemble,current]|[tmean,prec]|[0.5,0.5]|[12,12]|backward|1:12|none|[2020_2049,1960_1990]|[arg,global]|[30s,10min]|[a1b,baseline]|/var/www/analogues/outputs/GLOBAL_1393504908447/|0.0

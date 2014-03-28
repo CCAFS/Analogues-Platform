@@ -1,0 +1,23 @@
+[
+	{
+		"site":"UGA_1369492205024",
+		"zones":"uga,uga",
+		"x":30.841810367500113,
+		"y":0.024947277230827583,
+		"direction":"none",
+		"period":"1960_1990,1960_1990",
+		"scenario":"baseline,baseline",
+		"model":"current,current",
+		"resolution":"30s,30s",
+		"vars":"tmean,prec",
+		"weights":"0.3,0.7",
+		"rotation":"prec",
+		"growingseason":"1:12",
+		"threshold":0,
+		"thumbnail": "./js/ccafs/dijit/mapgallery/imgs/default.png"
+	},{
+		"site":"TZA_1369492734275","zones":"tza,tza","x":33.479251220000044,"y":-5.411293403883492,"direction":"forward","period":"1960_1990,2020_2049","scenario":"baseline,A1B","model":"current,ensemble,bccr_bcm2_0","resolution":"30s,30s","vars":"tmean,prec","weights":"0.4,0.6","rotation":"prec","growingseason":"1:12","threshold":0.1,"thumbnail": "./js/ccafs/dijit/mapgallery/imgs/default.png"
+	},{
+		"site":"GHA_1369493012193","zones":"gha,gha","x":-1.0624865075000938,"y":8.279670729292803,"direction":"backward","period":"2020_2049,1960_1990","scenario":"A1B,baseline","model":"ensemble,current","resolution":"30s,30s","vars":"tmean,prec","weights":"0.5,0.5","rotation":"prec","growingseason":"1:12","threshold":0,"thumbnail": "./js/ccafs/dijit/mapgallery/imgs/default.png"
+	}
+]

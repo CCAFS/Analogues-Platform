@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>CCAFS Climate Analogues Online</title>   
+    <meta http-equiv="X-UA-Compatible" content="IE=7,IE=8,IE=9,IE=10,chrome=1" />
+    <meta name="viewport" content="initial-scale=0, maximum-scale=1,user-scalable=yes">
+    <meta name="author" content="Ernesto Giron Echeverry">
+    <meta name="copyright" content="&copy; 2011 - 2013 CCAFS - CIAT.">
+    <meta name="keywords" content="CCAFS,CIAT,egiron,Climate,Analogues,Similarity">
+    <meta name="date" content="2013-03-13T08:49:37+00:00">
+
+    <link rel="stylesheet" href="http://serverapi.arcgisonline.com/jsapi/arcgis/3.4/js/dojo/dijit/themes/nihilo/nihilo.css">
+    <link rel="stylesheet" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.4/js/esri/css/esri.css">
+    <link rel="stylesheet" href="js/theme/default/style.css" type="text/css">
+    <link rel="stylesheet" href="js/ccafs/dijit/mapgallery/css/mapgallery.css">
+    <link rel="stylesheet" href="css/analoguesdtb.css">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lte IE 6]>
+      <link rel="stylesheet" href="js/theme/default/ie6-style.css" type="text/css" />
+    <![endif]-->
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="span12 columns">
+                <div class="LogoCCAFS unselectable"></div>
+                <div class="appName unselectable">Climate Analogues</div>
+                <div style="float: right"><a href="http://www.ccafs-analogues.org" target="_blank" rel="external" class="btn"><i class="icon-info-sign"></i> About</a></div>
+                <span class="subtitle">A glimpse of tomorrow's climates, today</span>
+                <hr/>
+                <div id="alertMsg" class="alertaError alert alert-error fade in"><div id="errMsg"></div></div>
+                <div id="analoguesSteps"></div>
+                <div id="mapgallery">
+                    <hr/>
+                    <div id="lastvisitedSites"></div>
+                    <div id="analoguespager" class="pagination pagination-centered"></div>
+                </div>
+                <hr/>
+                <div class="alert alert-info">
+                    <p>
+                    The analogues approach is a novel way of supporting modeled policy recommendations with on-the-ground empirical testing. Analogues refer to sites or years that experience conditions with statistical similarity, primarily in terms of current or future climate, but they can also include additional factors such as soils, crops, and socioeconomic characteristics. This helps link top-down global models with targeted field trials or visits. In essence, the approach locates a site whose climate today is similar to the given future of a place of interest (i.e. where can we find today the future climate of Nairobi, Kenya?), or vice-versa.
+                    </p>
+                    <p>
+                    This project is supported by the <strong>CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS)</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">Copyright © 2011 - 2013, CCAFS. All Rights Reserved.</div>
+        <p class="version"><i>Developed by <a class="developedlink" href="http://ernestogiron.blogspot.com/" target="new">egiron</a>.</i><em> Version: 1.0.14 Beta</em></p>
+    </div>
+
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-27375162-3', 'cgiar.org'); //this is the original
+        //ga('create', 'UA-43958342-1', {'name': 'dev'});  // New tracker for development ccafs.apps.test@gmail.com.
+        ga('send', 'pageview');
+        //ga('dev.send', 'pageview'); // Send page view for new tracker. 
+    </script>
+    <script>
+        var dojoConfig = {
+            async: 1,
+            parseOnLoad: true,
+            packages: [
+                { name: "bootstrap", location: location.pathname.replace(/\/[^/]+$/, '') + "/js/dojobootstrap" },
+                { name: "ccafs", location: location.pathname.replace(/\/[^/]+$/, '') + "/js/ccafs" }
+            ]
+        };
+    </script>
+    <script type="text/javascript" src="//serverapi.arcgisonline.com/jsapi/arcgis/?v=3.4"></script>
+    <script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
+    <script src="js/OpenLayers.js"></script>
+    <script type="text/javascript" src="js/climateAnalogues_v1.js"></script>
+    <script></script>
+</body>
+</html>

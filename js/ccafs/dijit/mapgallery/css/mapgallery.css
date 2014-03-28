@@ -1,0 +1,40 @@
+.analoguesWidget {
+	border: 1px solid #999;
+	width: 148px;
+	padding: 5px;
+	margin:16px 12px;
+	overflow: hidden; /* I hear this helps clear floats inside */
+	display:inline-block;
+	cursor:pointer;
+	text-align:center;
+}
+ 
+.analoguesWidget h5 {
+	font-size: 1.5em;
+	font-style: italic;
+	text-align: center;
+	margin: 0px;
+}
+ 
+.analoguesWidgetThumbnail {
+	/*float: left;*/
+	margin: 4px 12px 4px 0px;
+	max-width: 70px;
+	max-height: 50px;
+}
+
+.analoguesWidget img {
+	margin: 2px 2px;
+	max-width: 140px;
+	height: 80px;
+}
+
+.analoguesWidgetsiteName {
+	font-size: 0.9em;
+	font-weight: bold;
+	/*font-style: italic;*/
+	text-align: center;
+	margin: 0px;
+	padding:0px;
+
+}
