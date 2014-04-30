@@ -9,14 +9,15 @@
   Special styles for presenting Bootstrap's documentation and examples
 */
 
-body {
+/*body {*/
   /*background: -webkit-linear-gradient(white 20%, #eee);
   background: -moz-linear-gradient(white 20%, #eee);*/
   /*background: -webkit-linear-gradient(#eee, white 20%);
   background: -moz-linear-gradient(#eee, white 20%);*/
-  background: -webkit-linear-gradient(rgb(240, 241, 238), white 22%); /*rgb(225, 236, 191)*/
-  background: -moz-linear-gradient(rgb(240, 241, 238), white 22%);
-}
+  /*background: -webkit-linear-gradient(rgb(240, 241, 238), white 22%); /*rgb(225, 236, 191)*/
+  /*background: -moz-linear-gradient(rgb(240, 241, 238), white 22%);*/
+ /* background:url('../js/dojobootstrap/bootstrap/img/background.jpg') repeat;*/  
+/*}*/
 
 #map {
   /*left:0px;*/
@@ -217,21 +218,54 @@ font-weight: normal;
   margin-bottom: 20px;   
 }*/
 
+/*************** FOOTER ****************
+#prefooter {
+    background-color: #FFFFFF;
+    background-image: url("../imgs/footer.png");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    border: 0 none;
+    height: 145px;
+	margin-top:15px;
+    
+    padding: 5px 0px 10px;
+    width: 940px;
+}
+
+#prefooter div.column {
+    float: left;
+    display: inline;
+    margin-right: 20px;
+    margin-top: 40px;
+    width: 145px;
+    text-align: end;
+}*/
+
+
 .appName {
   color: #487429; /*color:#4f6c18;*/
   font-family: 'Oswald', sans-serif;
   /*float: left;*/
   font-size: 60px;
-  font-weight:bold;
-  line-height:50px;
+  /*font-weight:bold;*/
+  line-height:90px;
   /*height: 38px;*/
   margin: 22px -7px;
-  text-shadow: 2px 2px #fff;
+  padding: 0 0 0 42px;
+  /*text-shadow: 2px 2px #fff;*/
+  text-decoration:none;
+}
+.copyright {
+    color: #948A54;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: monospace;
 }
 .subtitle {
   /*font-style:italic;*/
   font-size:12pt;
   color:#999;
+  padding: 50px 0 0 42px;
   position: relative;
   top: -4px;
 }
@@ -550,6 +584,20 @@ div.olControlZoom a {
   transform: rotate(-90deg);
   -ms-transform: rotate(-90deg); /* IE 9 */
   -webkit-transform: rotate(-90deg); /* Safari and Chrome */
+}
+
+div.wrapper-main {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 15px #E1E1E1;
+    margin-top: 10px;
+    padding: 10px 20px 0px;
+    /* SHADOW */
+    -webkit-box-shadow: 2px 7px 29px #5A5E59; /* Safari and Chrome */
+    box-shadow: 2px 7px 29px #5A5E59;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Glow(Color=#5A5E59,Strength=10)";
+   /* background-image: url("../imgs/header.png");
+    background-repeat: no-repeat;*/
 }
 
 a.olControlZoomOut {

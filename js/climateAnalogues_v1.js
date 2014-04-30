@@ -282,8 +282,8 @@ function createSteps(){
                                 	Use the tab below to zoom to a country then click a location on the map to get coordinates, or alternatively, enter the latitude and longitude directly \
                                 </div> \
                                 <select id="ClimaticZone" style="width:150px;display:inline;" title="" onchange="ZoomtoClimaticZone(this.options[this.selectedIndex].value);"> \
-	                                <option disabled="disabled" value="none" selected="">Zoom to country</option> \
-	                                <option value="global" >Global</option> \
+	                                <--! <option disabled="disabled" value="none" selected="">Zoom to country</option>--> \
+	                                <option value="global" selected="selected" >Global</option> \
 	                                <optgroup label="COUNTRY">';
 	                                if (zones.length > 0) {
 	    								dojo.forEach(zones,function(entry, i){
@@ -387,10 +387,7 @@ function createSteps(){
 									<select id="refResolution" style="width:250px;" onchange="changeRefResolution(this.options[this.selectedIndex].value);"> \
 										<option value="30s" disabled="disabled">30 arc-seconds</option> \
 		                                <option value="2_5min" >2.5 arc-minutes</option> \
-		                                <option value="5min" disabled="disabled">5 arc-minutes</option> \
 		                                <option value="10min" selected="" >10 arc-minutes</option> \
-		                                <option value="25min" disabled="disabled">25 arc-minutes</option> \
-										<option value="30min" disabled="disabled">30 arc-minutes</option> \
 		                            </select>\
 					            </div> \
 						    </td>\
@@ -427,10 +424,7 @@ function createSteps(){
 									<select id="targetResolution" style="width:250px;" onchange="changeTargetResolution(this.options[this.selectedIndex].value);"> \
 		                                <option value="30s" disabled="disabled">30 arc-seconds</option> \
 		                                <option value="2_5min">2.5 arc-minutes</option> \
-		                                <option value="5min" disabled="disabled">5 arc-minutes</option> \
 		                                <option value="10min" selected="" >10 arc-minutes</option> \
-		                                <option value="25min" disabled="disabled">25 arc-minutes</option> \
-										<option value="30min" disabled="disabled">30 arc-minutes</option> \
 		                            </select>\
 					            </div> \
 				            </td></tr> \
@@ -1856,7 +1850,7 @@ function initTooltips(){
 
 	//Period
 	var periodhelp = "<p>The time period over which current and future climates are calculated. <br/><br/> \
-					 <i>NOTE: At the moment, the time period for climate projections is the decade 2030s (i.e. the years 2020-2049).</i></p>";
+					 <i>NOTE: The time period used for climate projections is the 2030s decade (i.e. the years 2020-2049).</i></p>";
 	var tt6 = new Popover({trigger:"hover", placement:"right", content:periodhelp, title:"<strong>Period</strong>"}, dojo.byId('periodhelp'));
 
 	//Scenario
@@ -1866,11 +1860,11 @@ function initTooltips(){
 	var tt7 = new Popover({trigger:"hover", placement:"right", content:scenariohelp, title:"<strong>Scenario</strong>"}, dojo.byId('scenariohelp'));
 
 	//Model
-	var modelhelp =  '<p>The list of Global Climate Models (GCMs) for which data is available. You can choose specific GCMs (a maximum of 3 at a time) or an ensemble which utilizes the mean of all available GCMs for that emissions scenario.</p>';
+	var modelhelp =  '<p>The list of Global Climate Models (GCMs) for which data is available. You can choose specific GCMs or an ensemble which utilizes the mean of all available GCMs for that emissions scenario.</p>';
 	var tt8 = new Popover({trigger:"hover", placement:"right", content:modelhelp, title:"<strong>Model</strong>"}, dojo.byId('modelhelp'));
 
 	//Resolution
-	var resolutionhelp = "<p>Spatial resolution available for the dataset. 30 arc-minutes is approximately 56 km at the equator while 30 arc-seconds is approximately 1 km.</p>";
+	var resolutionhelp = "<p>Spatial resolution of the dataset. 10 arc-minutes is approximately 19 km when measured at the equator while 30 arc-seconds is approximately 1 km.</p>";
 	var tt9 = new Popover({trigger:"hover", placement:"right", content:resolutionhelp, title:"<strong>Resolution</strong>"}, dojo.byId('resolutionhelp'));
 
 	//STEP 3
@@ -1980,7 +1974,7 @@ function addRow_Results(){
 	td.innerHTML = '<a rel="tooltip" id="lyrDownload_'+tileLayerName +'" class="icon-download icono" href="'+serverResults+lyrName+'/'+lyrName+'.zip"></a>';
 	var downloadLink = document.getElementById('lyrDownload_'+tileLayerName);
         addListener(downloadLink, 'click', function(event) {
-          ga('send', 'event', 'downloadMapResults', 'click', tileLayerName); 
+          /*ga('send', 'event', 'downloadMapResults', 'click', tileLayerName); */
           console.log(downloadLink); 
           console.log(event.target.getAttribute('id'));
         });
@@ -2184,7 +2178,7 @@ function onFullScreenExit() {
   if (logoCCAFSfullScreen) dojo.byId('logoCCAFSfullScreen').style.display = "none";
   if (mapResults) {
   		
-		if (mapResultmousePosition){
+		if (mapResultmousePosition){ //To adjust this to put the coordinates into the minimized map
 			dojo.byId('mapResultsMouseposition').style.display = 'none';
 			mapResults.removeControl(mapResultmousePosition);
 			mapResultmousePosition.destroy();

@@ -173,7 +173,7 @@ textarea {
   * {
     color: #000 !important;
     text-shadow: none !important;
-    background: transparent !important;
+    /*background: transparent !important;*/
     box-shadow: none !important;
   }
   a,
@@ -222,12 +222,13 @@ textarea {
 }
 
 body {
+  background:url('../img/background.jpg') no-repeat;
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
 }
 
 a {
@@ -289,10 +290,12 @@ a:focus {
 .navbar-static-top .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
+  
   width: 940px;
 }
 
 .span12 {
+  background-color:#fff;
   width: 940px;
 }
 
@@ -341,7 +344,7 @@ a:focus {
 }
 
 .offset12 {
-  margin-left: 980px;
+  margin-left: 940px;
 }
 
 .offset11 {
@@ -5961,8 +5964,11 @@ a.badge:focus {
 }
 
 .carousel {
+  background-color:#FFF;
+  padding-top:10px;
   position: relative;
   margin-bottom: 20px;
+  margin-top:10px;
   line-height: 1;
 }
 
