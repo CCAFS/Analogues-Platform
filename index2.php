@@ -1,4 +1,20 @@
 <?php 
+/* This file is part of Analogues Platform.
+ *
+ * Analogues Platform is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * at your option) any later version.
+ *
+ * Analogues Platform is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with CCAFS P&R. If not, see 
+ * <http://www.gnu.org/licenses/>
+ */
   require('../Analogues-Blog/wp-blog-header.php'); 
   get_header();
   
@@ -69,8 +85,8 @@
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        //ga('create', 'UA-27375162-3', 'cgiar.org'); //this is the original
-        //ga('create', 'UA-43958342-1', {'name': 'dev'});  // New tracker for development ccafs.apps.test@gmail.com.
+        //ga('create', '', ''); //this is the original
+        //ga('create', '', {'name': 'dev'});  // New tracker for development ccafs.apps.test@gmail.com.
         ga('send', 'pageview');
         //ga('dev.send', 'pageview'); // Send page view for new tracker. 
     </script>
